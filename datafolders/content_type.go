@@ -3,8 +3,8 @@ package datafolders
 type ContentType string
 
 const (
-	DataExtension     ContentType = "dataextension"
-	UserInitiatedSend ContentType = "userinitiatedsends"
+	DataExtension      ContentType = "dataextension"
+	UserInitiatedSends ContentType = "userinitiatedsends"
 )
 
 func (c ContentType) String() string {
