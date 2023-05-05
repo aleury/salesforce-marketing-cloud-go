@@ -3,20 +3,21 @@ package datafolders_test
 import (
 	"salesforce-marketing-cloud-go/datafolders"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-func TestDataExtensionContentType(t *testing.T) {
-	expected := "dataextension"
-	actual := datafolders.DataExtension.String()
-	if expected != actual {
-		t.Fatalf("expected: %s, got: %s", expected, actual)
+func TestContentTypesAreWellDefined(t *testing.T) {
+	type test struct {
+		input datafolders.ContentType
+		want  string
 	}
-}
 
-func TestUserInitiatedSendContentType(t *testing.T) {
-	expected := "userinitiatedsends"
-	actual := datafolders.UserInitiatedSends.String()
-	if expected != actual {
-		t.Fatalf("expected: %s, got: %s", expected, actual)
+	tests := []test{
+		{datafolders.DataExtension, "dataextension"},
+		{datafolders.UserInitiatedSends, "userinitiatedsends"},
+	}
+	for _, tc := range tests {
+		assert.Equal(t, tc.want, tc.input.String())
 	}
 }
