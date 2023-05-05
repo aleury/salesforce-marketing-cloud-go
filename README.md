@@ -1,5 +1,7 @@
 # Go SDK for Salesforce Marketing Cloud
 
+[![CI](https://github.com/aleury/salesforce-marketing-cloud-go/actions/workflows/ci.yml/badge.svg)](https://github.com/aleury/salesforce-marketing-cloud-go/actions/workflows/ci.yml)
+
 Used `gowsdl` to generate code from the Salesforce Marketing Cloud SOAP API WSDL.
 
 ```shell
